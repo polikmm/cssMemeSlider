@@ -55,3 +55,33 @@ body {
     justify-content: flex-end;
     gap: 0.2rem;
 }
+
+.paginations label{
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: #0000ff 2px solid;
+    background-color: #0000ff;
+    display: inline-block;
+}
+
+.paginations label:hover {
+    background-color: #fff;
+    border-color: #fff;
+}
+.slider-wrapper input:nth-child(1):checked ~ .paginations label:nth-child(1),
+.slider-wrapper input:nth-child(2):checked ~ .paginations label:nth-child(2),
+.slider-wrapper input:nth-child(3):checked ~ .paginations label:nth-child(3),
+.slider-wrapper input:nth-child(4):checked ~ .paginations label:nth-child(4) {
+    border-color: #0000ff;
+    background-color: transparent;
+}
+
+.slider-wrapper input:nth-child(1):checked:hover ~ .paginations label:nth-child(1),
+.slider-wrapper input:nth-child(2):checked:hover ~ .paginations label:nth-child(2),
+.slider-wrapper input:nth-child(3):checked:hover ~ .paginations label:nth-child(3),
+.slider-wrapper input:nth-child(4):checked:hover ~ .paginations label:nth-child(4) {
+    background-color: transparent;
+    border-color: #fff;
+}
